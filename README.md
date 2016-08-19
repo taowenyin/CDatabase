@@ -2,7 +2,7 @@
 
 ## 1. 程序目录结构
 
-！[程序目录结构](Screenshot/structure.png)
+![程序目录结构](Screenshot/structure.png)
 
 > Common：公共程序
 > 1. Error.cs：数据库操作错误码和错误信息
