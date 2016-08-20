@@ -1,6 +1,6 @@
 # 欢迎使用最简单的基于.Net的数据库分装类
 
-[![Build Status](https://travis-ci.org/taowenyin/CDatabase.svg?branch=master)](https://travis-ci.org/taowenyin/CDatabase)
+[![Build Status](https://travis-ci.org/taowenyin/CDatabase.svg?branch=master)](https://travis-ci.org/taowenyin/CDatabase) [![Build status](https://ci.appveyor.com/api/projects/status/v04vfetlno0iret4?svg=true)](https://ci.appveyor.com/project/taowenyin/cdatabase)
 
 ## 1. 程序目录结构
 
