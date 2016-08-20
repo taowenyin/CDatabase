@@ -13,15 +13,15 @@ before_build:
 build:
   verbosity: minimal
 artifacts:
-- path: CDatabase\bin\${configuration}\*.dll
-  name: cdatabase_${configuration}_V$(appveyor_build_version)
+- path: CDatabase\bin\Release\*.dll
+  name: cdatabase_release_v$(appveyor_build_version)
 deploy:
 - provider: GitHub
   tag: $(appveyor_build_version)
-  release: cdatabase_${configuration}_V$(appveyor_build_version)
+  release: cdatabase_release_v$(appveyor_build_version)
   auth_token:
     secure: suCkyLyNzRHvwL46/CXjLdTJukroztvH+omv/KtZgW7cpoi8BhvAsgAwkEy1uBER
-  artifact: CDatabase\bin\${configuration}\cdatabase_${configuration}_V$(appveyor_build_version).zip
+  artifact: CDatabase\bin\Release\cdatabase_release_v$(appveyor_build_version).zip
   draft: true
   prerelease: true
   force_update: true
