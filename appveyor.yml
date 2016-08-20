@@ -5,7 +5,7 @@ before_build:
 - ps: >-
     nuget restore
 
-    $env:MYSQL_PWD="05200902"
+    $env:MYSQL_PWD="Password12!"
 
     $cmd = '"C:\Program Files\MySql\MySQL Server 5.7\bin\mysql" -e "create database spslocal;" --user=root'
 
