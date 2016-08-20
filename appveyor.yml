@@ -1,0 +1,8 @@
+version: 1.0.{build}
+
+before_build:
+    - nuget resotre
+
+build:
+    verbosity: minimal
+    publish_wap : true
