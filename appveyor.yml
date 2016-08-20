@@ -1,9 +1,7 @@
 version: 0.0.{build}
 init:
-- cmd: 
+- cmd: "$env:MYSQL_PWD=\"Password12!\" \n$cmd = '\"C:\\Program Files\\MySql\\MySQL Server 5.7\\bin\\mysql\" -e \"create database spslocal;\" --user=root'\niex \"& $cmd\""
 services: mysql
-install:
-- ps: "$env:MYSQL_PWD=\"Password12!\" \n$cmd = '\"C:\\Program Files\\MySql\\MySQL Server 5.7\\bin\\mysql\" -e \"create database spslocal;\" --user=root'\niex \"& $cmd\""
 before_build:
 - ps: nuget restore
 build:
