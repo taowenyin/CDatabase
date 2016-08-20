@@ -23,5 +23,5 @@ deploy:
     secure: suCkyLyNzRHvwL46/CXjLdTJukroztvH+omv/KtZgW7cpoi8BhvAsgAwkEy1uBER
   artifact: cdatabase_release_v$(appveyor_build_version)
   draft: true
-  prerelease: true
+  prerelease: false
   force_update: true
