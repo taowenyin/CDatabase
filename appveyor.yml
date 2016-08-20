@@ -15,5 +15,7 @@ build:
 artifacts:
 - path: CDatabase\bin\Release
   name: cdatabase_dll
+- path: .\
+  name: cdatabase_src
 deploy:
 - provider: Local
