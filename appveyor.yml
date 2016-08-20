@@ -14,8 +14,14 @@ build:
   verbosity: minimal
 artifacts:
 - path: CDatabase\bin\Release
-  name: cdatabase_dll
-- path: .\
-  name: cdatabase_src
+  name: cdatabase_dll_V$(appveyor_build_version)
 deploy:
-- provider: Local
+- provider: GitHub
+  tag: $(appveyor_build_version)
+  release: cdatabase_dll_V$(appveyor_build_version)
+  auth_token:
+    secure: suCkyLyNzRHvwL46/CXjLdTJukroztvH+omv/KtZgW7cpoi8BhvAsgAwkEy1uBER
+  artifact: CDatabase\bin\Release\cdatabase_dll_V$(appveyor_build_version).zip
+  draft: true
+  prerelease: true
+  force_update: true
