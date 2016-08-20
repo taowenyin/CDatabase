@@ -1,10 +1,13 @@
 version: 0.0.{build}
+services: mysql
+install:
+- ps: >-
+    $env:MYSQL_PWD="Password12!"
 
-services:
-- mysql
+    $cmd = '"C:\Program Files\MySql\MySQL Server 5.7\bin\mysql" -e "create database YourDatabase;" --user=root'
 
+    iex "& $cmd"
 before_build:
-- nuget restore
-
+- ps: nuget restore
 build:
   verbosity: minimal
