@@ -17,9 +17,9 @@ namespace CDatabase.Common
 
         public static class ErrorMessage
         {
-            public static string UNKNOWN_DATABASE = "找不到数据库";
-            public static string UNKNOWN_Server = "找不到数据库服务器";
-            public static string ACCESS_DENIED = "账号密码错误";
+            public static string UNKNOWN_DATABASE = "No Database";
+            public static string UNKNOWN_Server = "No Database Server";
+            public static string ACCESS_DENIED = "Access Denied";
         }
     }
 }
