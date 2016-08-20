@@ -30,7 +30,7 @@ namespace Test
             }
             catch (DatabaseException e)
             {
-                Assert.Fail("数据库打开测试失败，错误代码：" + e.GetErrorCode() + "，错误信息：" + e.GetErrorMsg());
+                Assert.Fail("Open database fail, error code:" + e.GetErrorCode() + ", error message:" + e.GetErrorMsg());
             }
         }
 
@@ -60,7 +60,7 @@ namespace Test
             }
             catch (DatabaseException e)
             {
-                Assert.Fail("数据库关闭测试失败，错误代码：" + e.GetErrorCode() + "，错误信息：" + e.GetErrorMsg());
+                Assert.Fail("Close database fail, error code:" + e.GetErrorCode() + ", error message:" + e.GetErrorMsg());
             }
         }
 
