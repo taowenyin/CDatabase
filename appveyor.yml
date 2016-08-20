@@ -13,7 +13,7 @@ before_build:
 build:
   verbosity: minimal
 artifacts:
-- path: CDatabase\bin\Release\*.dll
+- path: CDatabase\bin\Release
   name: cdatabase_release_v$(appveyor_build_version)
 deploy:
 - provider: GitHub
