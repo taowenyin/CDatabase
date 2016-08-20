@@ -21,7 +21,7 @@ deploy:
   release: cdatabase_release_v$(appveyor_build_version)
   auth_token:
     secure: suCkyLyNzRHvwL46/CXjLdTJukroztvH+omv/KtZgW7cpoi8BhvAsgAwkEy1uBER
-  artifact: CDatabase\bin\Release\cdatabase_release_v$(appveyor_build_version).zip
+  artifact: cdatabase_release_v$(appveyor_build_version).zip
   draft: true
   prerelease: true
   force_update: true
