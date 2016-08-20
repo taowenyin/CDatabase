@@ -1,4 +1,4 @@
-version: 0.0.{build}
+version: 0.0.0.test.{build}
 configuration: Release
 services: mysql
 before_build:
