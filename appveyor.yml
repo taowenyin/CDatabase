@@ -1,7 +1,10 @@
 version: 0.0.{build}
 
 before_build:
-    - nuget restore
+  - nuget restore
+
+services:
+  - mysql
 
 build:
     verbosity: minimal
