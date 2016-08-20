@@ -1,4 +1,4 @@
-version: release_0.{build}
+version: release_v0.{build}
 configuration: Release
 services: mysql
 before_build:
@@ -14,14 +14,14 @@ build:
   verbosity: minimal
 artifacts:
 - path: CDatabase\bin\Release
-  name: cdatabase_v$(appveyor_build_version)
+  name: cdatabase_$(appveyor_build_version)
 deploy:
 - provider: GitHub
   tag: $(appveyor_build_version)
-  release: cdatabase_v$(appveyor_build_version)
+  release: cdatabase_$(appveyor_build_version)
   auth_token:
     secure: suCkyLyNzRHvwL46/CXjLdTJukroztvH+omv/KtZgW7cpoi8BhvAsgAwkEy1uBER
-  artifact: cdatabase_v$(appveyor_build_version)
+  artifact: cdatabase_$(appveyor_build_version)
   draft: true
   prerelease: false
   force_update: true
