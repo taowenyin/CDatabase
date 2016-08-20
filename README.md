@@ -1,5 +1,7 @@
 # 欢迎使用最简单的基于.Net的数据库分装类
 
+[![Build Status](https://travis-ci.org/taowenyin/CDatabase.svg?branch=master)](https://travis-ci.org/taowenyin/CDatabase)
+
 ## 1. 程序目录结构
 
 ![程序目录结构](Screenshot/structure.png)
