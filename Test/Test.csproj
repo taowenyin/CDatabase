@@ -61,7 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="3rdparty\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll" />
+    <Content Include="Resource\testsql.sql" />
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

@@ -83,13 +83,16 @@ namespace Test
         [TestMethod]
         public void TestExecSQLFIle()
         {
-            //database.Open();
+            database.Open();
+            int actual = 0;
+            FileInfo info = new FileInfo("../../Resource/testsql.sql");
+            if(info.Exists)
+            {
+                actual = database.ExecSQL(info);
+            }
+            database.Close();
 
-            //FileInfo info = new FileInfo("D:/MyCode/VisualStudio/CDatabase/SmartParkSystemLocal_V2.sql");
-            //int actual = database.ExecSQL(info);
-            //database.Close();
-
-            //Assert.IsTrue(actual > 0, "执行SQL文件测试失败");
+            Assert.IsTrue(actual > 0, "执行SQL文件测试失败");
         }
     }
 }
