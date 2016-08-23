@@ -15,8 +15,8 @@ namespace Test
             DbConfig config = new DbConfig();
             config.Server = "localhost";
             config.User = "root";
-            //config.Password = "Password12!";
-            config.Password = "05200902";
+            config.Password = "Password12!";
+            //config.Password = "05200902";
             config.Port = 3306;
             config.Database = "spslocal";
             database = DatabaseFactory.CreateDatabase(config,
@@ -42,8 +42,8 @@ namespace Test
             DbConfig config = new DbConfig();
             config.Server = "localhost";
             config.User = "root";
-            //config.Password = "Password12!";
-            config.Password = "05200902";
+            config.Password = "Password12!";
+            //config.Password = "05200902";
             config.Port = 3306;
             config.Database = "spslocal";
 
