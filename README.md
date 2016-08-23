@@ -6,7 +6,7 @@
 
 ![程序目录结构](Screenshot/structure.png)
 
-> Common：公共程序
+> * Common：公共程序
 > 1. Error.cs：数据库操作错误码和错误信息
 > 2. Function.cs：通用函数
 > * Cursor：各类数据库的游标类
@@ -27,9 +27,9 @@
 
 ## 3. 引入第三方库
 
-### 方法一：通过Vistual Studio自带的NuGet包管理工具引用第三方库
+#### 方法一：通过Vistual Studio自带的NuGet包管理工具引用第三方库
 
-### 方法二：通过项目引用第三方DLL库
+#### 方法二：通过项目引用第三方DLL库
 
 > 右键项目->添加->引用->浏览(B)...->选择需要的DLL->确定
 
@@ -77,6 +77,13 @@ catch (DatabaseException e)
 /// <param name="bindArgs">用于替换占位符的数组</param>
 /// <returns>执行SQL语句影响的行数</returns>
 int ExecSQL(string sql, string[] bindArgs);
+
+/// <summary>
+/// 执行SQL文件
+/// </summary>
+/// <param name="info">SQL文件对象</param>
+/// <returns>执行SQL语句影响的行数</returns>
+int ExecSQL(FileInfo info);
 ```
 
 2. 向数据库插入数据

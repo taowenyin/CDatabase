@@ -4,6 +4,7 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -126,6 +127,17 @@ namespace CDatabase
             command.Dispose();
 
             return effect;
+        }
+
+        public int ExecSQL(FileInfo info)
+        {
+            if(!info.Exists || !info.Extension.Equals(Database.SQL_FILE_SUFFIX))
+            {
+                return 0;
+            }
+            string sql = File.ReadAllText(info.FullName);
+
+            return ExecSQL(sql, null);
         }
 
         public long Insert(string table, string nullColumnHack, Dictionary<string, string> values)

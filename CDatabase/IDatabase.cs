@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,6 +41,13 @@ namespace CDatabase
         /// <param name="bindArgs">用于替换占位符的数组</param>
         /// <returns>执行SQL语句影响的行数</returns>
         int ExecSQL(string sql, string[] bindArgs);
+
+        /// <summary>
+        /// 执行SQL文件
+        /// </summary>
+        /// <param name="info">SQL文件对象</param>
+        /// <returns>执行SQL语句影响的行数</returns>
+        int ExecSQL(FileInfo info);
 
         /// <summary>
         /// 执行一条插入语句

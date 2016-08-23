@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\Database.cs" />
     <Compile Include="Common\Error.cs" />
     <Compile Include="Common\Function.cs" />
     <Compile Include="Cursor\MySqlCursor.cs" />

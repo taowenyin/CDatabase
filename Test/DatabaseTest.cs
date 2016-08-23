@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CDatabase;
+using System.IO;
 
 namespace Test
 {
@@ -14,7 +15,8 @@ namespace Test
             DbConfig config = new DbConfig();
             config.Server = "localhost";
             config.User = "root";
-            config.Password = "Password12!";
+            //config.Password = "Password12!";
+            config.Password = "05200902";
             config.Port = 3306;
             config.Database = "spslocal";
             database = DatabaseFactory.CreateDatabase(config,
@@ -40,7 +42,8 @@ namespace Test
             DbConfig config = new DbConfig();
             config.Server = "localhost";
             config.User = "root";
-            config.Password = "Password12!";
+            //config.Password = "Password12!";
+            config.Password = "05200902";
             config.Port = 3306;
             config.Database = "spslocal";
 
@@ -68,18 +71,25 @@ namespace Test
         public void TestExecSQL()
         {
             database.Open();
-            database.Close();
 
             int actual = database.ExecSQL(
                 "CREATE SCHEMA IF NOT EXISTS `testdatabase` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci", 
                 null);
+            database.Close();
+
             Assert.IsTrue(actual > 0, "执行SQL语句测试失败");
         }
 
         [TestMethod]
-        public void TestInsert()
+        public void TestExecSQLFIle()
         {
+            database.Open();
 
+            FileInfo info = new FileInfo("D:/MyCode/VisualStudio/CDatabase/SmartParkSystemLocal_V2.sql");
+            int actual = database.ExecSQL(info);
+            database.Close();
+
+            Assert.IsTrue(actual > 0, "执行SQL文件测试失败");
         }
     }
 }
