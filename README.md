@@ -353,5 +353,3 @@ double GetDouble(int i);
 /// <returns>字段值</returns>
 double GetDouble(string column);
 ```
-
-JF Test
